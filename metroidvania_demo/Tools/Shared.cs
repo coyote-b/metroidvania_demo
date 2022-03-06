@@ -8,6 +8,7 @@ namespace MetroidvaniaDemo
 {
     public static class Shared
     {
+        public static Game game;
         public static Vector2 stage;
         public static SpriteBatch spriteBatch;
     }

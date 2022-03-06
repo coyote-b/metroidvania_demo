@@ -1,0 +1,76 @@
+<spritesheet>
+    <sprites image="assets/player-idle">
+        <animation title="PlayerIdle" delay="3">
+            <cut w="20" x="29" y="24" h="40"/>
+            <cut w="18" x="110" y="25" h="39"/>
+            <cut w="16" x="191" y="26" h="38"/>
+            <cut w="18" x="270" y="25" h="39"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-run">
+        <animation title="PlayerRun" delay="3">
+            <cut w="21" x="29" y="30" h="34"/>
+            <cut w="22" x="110" y="28" h="36"/>
+            <cut w="26" x="184" y="27" h="36"/>
+            <cut w="32" x="260" y="28" h="33"/>
+            <cut w="25" x="345" y="29" h="35"/>
+            <cut w="16" x="431" y="30" h="34"/>
+            <cut w="18" x="509" y="28" h="36"/>
+            <cut w="25" x="584" y="27" h="36"/>
+            <cut w="30" x="661" y="28" h="33"/>
+            <cut w="22" x="745" y="29" h="35"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-run-shoot">
+        <animation title="PlayerRunShoot" delay="3">
+            <cut w="26" x="29" y="30" h="34"/>
+            <cut w="25" x="110" y="28" h="36"/>
+            <cut w="31" x="184" y="27" h="36"/>
+            <cut w="35" x="260" y="28" h="33"/>
+            <cut w="30" x="345" y="29" h="35"/>
+            <cut w="24" x="431" y="30" h="34"/>
+            <cut w="25" x="510" y="28" h="36"/>
+            <cut w="31" x="584" y="27" h="36"/>
+            <cut w="34" x="661" y="28" h="33"/>
+            <cut w="30" x="745" y="29" h="35"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-stand">
+        <animation title="PlayerStandShoot" delay="3">
+            <cut w="21" x="35" y="27" h="37"/>
+            <cut w="20" x="114" y="27" h="37"/>
+            <cut w="21" x="194" y="27" h="37"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-shoot-up">
+        <animation title="PlayerUpShoot" delay="3">
+            <cut w="18" x="35" y="24" h="40"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-duck">
+        <animation title="PlayerDuck" delay="3">
+            <cut w="23" x="33" y="40" h="24"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-hurt">
+        <animation title="PlayerHurt" delay="3">
+            <cut w="20" x="28" y="29" h="34"/>
+            <cut w="25" x="103" y="32" h="24"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-jump">
+        <animation title="PlayerJump" delay="3">
+            <cut w="27" x="28" y="26" h="38"/>
+            <cut w="29" x="105" y="34" h="21"/>
+            <cut w="28" x="185" y="36" h="16"/>
+            <cut w="16" x="269" y="27" h="28"/>
+            <cut w="28" x="346" y="32" h="16"/>
+            <cut w="16" x="434" y="27" h="28"/>
+        </animation>
+    </sprites>
+    <sprites image="assets/player-cling">
+        <animation title="PlayerCling" delay="3">
+            <cut w="31" x="30" y="29" h="32"/>
+        </animation>
+    </sprites>
+</spritesheet>

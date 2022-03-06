@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using MetroidvaniaDemo.Managers;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -9,13 +10,16 @@ using System.Text;
 
 namespace MetroidvaniaDemo
 {
+    // a class for entity sprites
+    // TODO: make this more flexible. add children classes for entities that inherit from this
+    // right now it only functions for player (since its the only existing entity)
     class Sprite : DrawableGameComponent
     {
         private AnimationManager _animationManager;
         private Dictionary<string, Animation> _animations;
         private Texture2D _tex;
         private Vector2 _position;
-        private string lastDirection;
+        private string _lastDirection;
 
         private bool _duck;
         private bool _pointUp;
@@ -65,56 +69,42 @@ namespace MetroidvaniaDemo
                 _shoot = false;
         }
 
+        // TODO: fix directions
         protected virtual void SetAnimation()
         {
-            if (Velocity.X > 0)
-            {
-                if (_shoot)
-                    _animationManager.Play(_animations["WalkShootRight"]);
-                else
-                    _animationManager.Play(_animations["WalkRight"]);
+            bool flip = false;
 
-                lastDirection = "RIGHT";
-            }
-            else if (Velocity.X < 0)
+            if (Velocity.X != 0)
             {
-                if (_shoot)
-                    _animationManager.Play(_animations["WalkShootLeft"]);
+                if (Velocity.X < 0)
+                {
+                    flip = true;
+                    _lastDirection = "LEFT";
+                }
                 else
-                    _animationManager.Play(_animations["WalkLeft"]);
+                {
+                    _lastDirection = "RIGHT";
+                }
+                    
 
-                lastDirection = "LEFT";
+                if (_shoot)
+                    _animationManager.Play(_animations["PlayerRunShoot"], flip);
+                else
+                    _animationManager.Play(_animations["PlayerRun"], flip);
             }
             else if (Velocity.X == 0)
             {
+                if (_lastDirection == "LEFT")
+                    flip = true;
+
                 if (_duck)
-                {
-                    if (lastDirection == "RIGHT")
-                        _animationManager.Play(_animations["DuckRight"]);
-                    else if (lastDirection == "LEFT")
-                        _animationManager.Play(_animations["DuckLeft"]);
-                }
+                    _animationManager.Play(_animations["PlayerDuck"], flip);
                 else if (_pointUp)
-                {
-                    if (lastDirection == "RIGHT")
-                        _animationManager.Play(_animations["ShootUpRight"]);
-                    else if (lastDirection == "LEFT")
-                        _animationManager.Play(_animations["ShootUpLeft"]);
-                }
+                    _animationManager.Play(_animations["PlayerUpShoot"], flip);
                 else if (_shoot)
-                {
-                    if (lastDirection == "RIGHT")
-                        _animationManager.Play(_animations["ShootRight"]);
-                    else if (lastDirection == "LEFT")
-                        _animationManager.Play(_animations["ShootLeft"]);
-                }
+                    _animationManager.Play(_animations["PlayerStandShoot"], flip);
                 else
-                {
-                    if (lastDirection == "RIGHT")
-                        _animationManager.Play(_animations["IdleRight"]);
-                    else if (lastDirection == "LEFT")
-                        _animationManager.Play(_animations["IdleLeft"]);
-                }
+                    _animationManager.Play(_animations["PlayerIdle"], flip);
             }
         }
 

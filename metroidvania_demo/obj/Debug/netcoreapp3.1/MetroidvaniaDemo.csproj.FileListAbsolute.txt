@@ -44,3 +44,10 @@ C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania
 C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\obj\Debug\netcoreapp3.1\MetroidvaniaDemo.dll
 C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\obj\Debug\netcoreapp3.1\MetroidvaniaDemo.pdb
 C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\obj\Debug\netcoreapp3.1\MetroidvaniaDemo.genruntimeconfig.cache
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\obj\Debug\netcoreapp3.1\MetroidvaniaDemo.Properties.Resources.resources
+C:\Users\leova\Documents\personal coding projects\metroidvania_demo\metroidvania_demo\obj\Debug\netcoreapp3.1\MetroidvaniaDemo.csproj.GenerateResource.cache
